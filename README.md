@@ -41,3 +41,13 @@ To calculate the derivatives of stock prices, you will need to compile and run t
 ```bash
 g++ -o derivative_calculator derivative_calculator.cpp
 ```
+
+### 3. Run the C++ Program
+```bash
+./derivative_calculator
+```
+
+### 4. Run the Python Script 
+```bash
+python stock_advisor.py
+```
