@@ -26,3 +26,18 @@ To install the required Python libraries, run the following command:
 
 ```bash
 pip install yfinance matplotlib
+```
+## Running the `derivative_calculator.cpp` and `stock_advisor.py` Files
+
+### 2. Compile the C++ Code
+
+To calculate the derivatives of stock prices, you will need to compile and run the `derivative_calculator.cpp` file. This will generate the rate of change for the given stock data.
+
+#### Steps:
+
+1. **Navigate to the directory** where the `derivative_calculator.cpp` file is located.
+2. **Compile the C++ code** using the following command (assuming you're using g++):
+
+```bash
+g++ -o derivative_calculator derivative_calculator.cpp
+```
