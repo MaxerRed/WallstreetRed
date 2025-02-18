@@ -13,8 +13,6 @@ std::vector<double> compute_derivative(const std::vector<double>& prices) {
 }
 
 int main() {
-    // Example: Stock prices (could be input by the user in a more complex setup)
-    std::vector<double> stock_prices = {150, 151, 153, 155, 158, 160};
 
     // Calculate derivatives (rate of change)
     std::vector<double> derivatives = compute_derivative(stock_prices);
