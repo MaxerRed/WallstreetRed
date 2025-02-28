@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallstreet Red</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Wallstreet Red - Stock Analysis</h1>
+        
+        <form action="/" method="POST">
+            <label for="ticker">Enter Stock Ticker:</label>
+            <input type="text" id="ticker" name="ticker" required>
+            <button type="submit">Get Stock Info</button>
+        </form>
+
+        {% if graph_html %}
+            <div class="graph-container">
+                <h2>Stock Price for {{ ticker }}</h2>
+                <div class="graph">
+                    {{ graph_html|safe }}
+                </div>
+
+                <div class="stats">
+                    <h3>Stock Statistics</h3>
+                    <ul>
+                        <li><strong>Open Price:</strong> ${{ stats.open }}</li>
+                        <li><strong>Close Price:</strong> ${{ stats.close }}</li>
+                        <li><strong>High Price:</strong> ${{ stats.high }}</li>
+                        <li><strong>Low Price:</strong> ${{ stats.low }}</li>
+                        <li><strong>Average Volume:</strong> {{ stats.volume|round(0) }}</li>
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
